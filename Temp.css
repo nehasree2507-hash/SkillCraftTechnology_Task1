@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4F46E5,#7C3AED,#2563EB);
+    min-height:100vh;
+}
+
+.main-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.content{
+    width:100%;
+    max-width:1100px;
+}
+
+.heading{
+    text-align:center;
+    color:#fff;
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:45px;
+    text-shadow:0 4px 12px rgba(0,0,0,.25);
+    letter-spacing:.5px;
+}
+
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.temp-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:28px;
+    transition:.3s ease;
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
+.temp-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:2px solid #EEF2F7;
+}
+
+.card-header h2{
+    color:#1E293B;
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+.symbol{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+/* Celsius */
+
+.celsius-card{
+    border-top:6px solid #2563EB;
+}
+
+.celsius-card .symbol{
+    background:linear-gradient(135deg,#3B82F6,#2563EB);
+}
+
+.celsius-card:hover{
+    box-shadow:0 18px 35px rgba(37,99,235,.25);
+}
+
+/* Fahrenheit */
+
+.fahrenheit-card{
+    border-top:6px solid #EA580C;
+}
+
+.fahrenheit-card .symbol{
+    background:linear-gradient(135deg,#F97316,#EA580C);
+}
+
+.fahrenheit-card:hover{
+    box-shadow:0 18px 35px rgba(234,88,12,.25);
+}
+
+/* Kelvin */
+
+.kelvin-card{
+    border-top:6px solid #059669;
+}
+
+.kelvin-card .symbol{
+    background:linear-gradient(135deg,#10B981,#059669);
+}
+
+.kelvin-card:hover{
+    box-shadow:0 18px 35px rgba(5,150,105,.25);
+}
+
+.temp-input{
+    width:100%;
+    padding:16px;
+    border-radius:12px;
+    border:2px solid #E2E8F0;
+    background:#F8FAFC;
+    outline:none;
+    font-size:18px;
+    text-align:center;
+    color:#1E293B;
+    transition:.3s;
+    font-weight:500;
+}
+
+.temp-input::placeholder{
+    color:#94A3B8;
+}
+
+.celsius-card .temp-input:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 12px rgba(37,99,235,.25);
+    background:#fff;
+}
+
+.fahrenheit-card .temp-input:focus{
+    border-color:#EA580C;
+    box-shadow:0 0 12px rgba(234,88,12,.25);
+    background:#fff;
+}
+
+.kelvin-card .temp-input:focus{
+    border-color:#059669;
+    box-shadow:0 0 12px rgba(5,150,105,.25);
+    background:#fff;
+}
+
+@media(max-width:768px){
+
+    .heading{
+        font-size:2.2rem;
+        margin-bottom:30px;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .temp-card{
+        padding:22px;
+    }
+
+}
